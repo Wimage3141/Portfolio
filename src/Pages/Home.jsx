@@ -2,6 +2,9 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Loader from '../Components/Loader.jsx';
 import Island from '../models/Island.jsx';
+import Sky from '../models/Sky.jsx';
+import Bird from '../models/Bird.jsx';
+import Plane from '../models/Plane.jsx';
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
     POPUP
@@ -30,16 +33,18 @@ const Home = () => {
         camera={{ near: 0.1, far:1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight />
-          <ambientLight />
-          <pointLight />
-          <spotLight />
+          <directionalLight position={[1, 1, 1]} intensity={2}/>
+          <ambientLight intensity={0.3}/>
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
 
+          <Bird />
+          <Sky />
           <Island
             position={islandPosition}
             scale={islandScale}
             rotation={islandRotation}
           />
+          <Plane />
         </Suspense>
       </Canvas>
     </section>
