@@ -48,6 +48,7 @@ function Home() {
       </Section>
 
       <Section id="education" title="Education">
+          <p>August 2022 - May 2026</p>
           <p>Bachelor of Science in Computer Science</p>
           <p>Minor in Mathematics</p>
       </Section>

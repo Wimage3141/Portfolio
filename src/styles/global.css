@@ -78,6 +78,7 @@ a {
 .site-header,
 .page {
   width: min(100%, 48rem);
+  margin-top: 2rem;
 }
 
 .nav-list {
@@ -90,4 +91,8 @@ a {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+.matter-playground {
+  min-height: 80vh;
 }
